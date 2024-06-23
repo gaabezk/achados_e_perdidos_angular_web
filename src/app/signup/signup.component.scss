@@ -1,94 +1,79 @@
 .form-container.signup {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-    background: linear-gradient(to bottom right, #5378d6, #6a8df7);
-    color: white;
-    text-align: center;
-    border-radius: 15px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    width: 85%;
-    max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  background: linear-gradient(to bottom right, #5378d6, #6a8df7);
+  color: white;
+  box-sizing: content-box;
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 85%;
 
-    h1 {
-        font-weight: 700;
-        margin-bottom: 30px;
-    }
+  max-width: 30rem;
 
-    form {
+  h1 {
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+
+  form {
+    width: 100%;
+
+    .input-group {
+      width: 100%;
+      margin-bottom: 1.25rem;
+
+      input {
         width: 100%;
+        padding: 0.875rem;
+        border-radius: 0.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        background: rgba(255, 255, 255, 0.15);
+        color: white;
 
-        .input-group {
-            width: 100%;
-            margin-bottom: 20px;
-
-            input {
-                background: rgba(255, 255, 255, 0.15);
-                color: white;
-                border: 1px solid rgba(255, 255, 255, 0.4);
-                font-size: 16px;
-                padding: 14px;
-                border-radius: 8px;
-                width: calc(100% - 28px); /* Considerando 14px de padding em cada lado */
-                box-sizing: border-box;
-
-                &::placeholder {
-                    color: rgba(255, 255, 255, 0.8);
-                }
-            }
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.8);
         }
-
-        button {
-            background: #344b9a;
-            color: white;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            font-size: 16px;
-            margin-top: 20px;
-            cursor: pointer;
-            border: none;
-            border-radius: 8px;
-            padding: 14px 50px; /* Ajuste o padding conforme necessário */
-            font-weight: bold;
-
-            &:hover {
-                background: #2d3f86;
-                transform: translateY(-2px);
-            }
-        }
-
-        .divider {
-            text-align: center;
-            margin: 20px 0;
-
-            span {
-                color: white;
-                padding: 0 10px;
-                font-weight: 500;
-            }
-        }
-
-        .social-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-
-            a {
-                margin: 0 15px;
-                display: inline-block;
-                transition: transform 0.3s ease;
-
-                img {
-                    width: 36px;
-                    height: 36px;
-                }
-            }
-
-            a:hover {
-                transform: translateY(-2px);
-            }
-        }
+      }
     }
+
+    button {
+      width: 100%;
+      margin-top: 1.25rem;
+    }
+
+    .divider {
+      text-align: center;
+      margin: 1.25rem 0;
+
+      span {
+        color: white;
+        padding: 0 0.625rem;
+        font-weight: 500;
+      }
+    }
+
+    .social-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 1.25rem;
+
+      a {
+        margin: 0 0.9375rem;
+        font-size: 1.875rem;
+        img {
+          width: 36px;
+          height: 36px;
+        }
+      }
+
+      a:hover {
+        transform: translateY(-0.125rem);
+      }
+    }
+  }
 }

@@ -1,125 +1,94 @@
 .form-container.login {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-    background: #f9fafc;
-    color: #333;
-    text-align: center;
-    border-radius: 15px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    width: 85%;
-    max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  background: #f9fafc;
+  color: #333;
+  text-align: center;
+  border-radius: 1rem;
+  box-sizing: content-box;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 85%;
+  max-width: 30rem;
+  margin-bottom: 2rem; /* Espaço inferior para separação dos componentes */
 
-    img.logo {
-        width: 80px;
-        margin-bottom: 20px;
-    }
+  img.logo {
+    width: 5rem;
+    margin-bottom: 1.25rem;
+  }
 
-    h2 {
-        margin-bottom: 30px;
-        font-weight: 500;
-    }
+  h2 {
+    margin-bottom: 2rem;
+    font-weight: 500;
+  }
 
-    form {
+  form {
+    width: 100%;
+
+    .input-group {
+      width: 100%;
+      margin-bottom: 1.25rem;
+
+      input {
         width: 100%;
-
-        .input-group {
-            width: 100%;
-            margin-bottom: 20px;
-
-            input[type="email"],
-            input[type="password"] {
-                background: white;
-                border: 1px solid #ccc;
-                font-size: 16px;
-                padding: 14px;
-                border-radius: 8px;
-                width: calc(100% - 28px); /* Considerando 14px de padding em cada lado */
-                box-sizing: border-box;
-
-                &:focus {
-                    border-color: #3f51b5;
-                    box-shadow: 0 0 10px rgba(63, 81, 181, 0.3);
-                    outline: none;
-                }
-            }
-        }
-
-        .remember-forgot {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            align-items: center;
-            margin-bottom: 20px;
-
-            label {
-                display: flex;
-                align-items: center;
-                font-size: 14px;
-                color: #666;
-
-                input {
-                    margin-right: 5px;
-                }
-            }
-
-            a {
-                color: #3f51b5;
-                text-decoration: none;
-                font-size: 14px;
-            }
-        }
-
-        button {
-            background: #3f51b5;
-            color: white;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            font-size: 16px;
-            margin-top: 20px;
-            cursor: pointer;
-            border: none;
-            border-radius: 8px;
-            padding: 14px 50px; /* Ajuste o padding conforme necessário */
-            font-weight: bold;
-
-            &:hover {
-                background: #3949ab;
-                transform: translateY(-2px);
-            }
-        }
-
-        .divider {
-            text-align: center;
-            margin: 20px 0;
-
-            span {
-                padding: 0 10px;
-                font-weight: 500;
-            }
-        }
-
-        .social-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-
-            a {
-                margin: 0 15px;
-                display: inline-block;
-                transition: transform 0.3s ease;
-
-                img {
-                    width: 36px;
-                    height: 36px;
-                }
-            }
-
-            a:hover {
-                transform: translateY(-2px);
-            }
-        }
+        padding: 0.875rem;
+        border-radius: 0.5rem;
+        border: 1px solid #ccc;
+      }
     }
+
+    .remember-forgot {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+      margin-bottom: 1.25rem;
+
+      a {
+        color: #3f51b5;
+        text-decoration: none;
+        font-size: 0.875rem;
+      }
+    }
+
+    button {
+      width: 100%;
+      margin-top: 1.25rem;
+    }
+
+    .divider {
+      text-align: center;
+      margin: 1.25rem 0;
+
+      span {
+        padding: 0 0.625rem;
+        font-weight: 500;
+      }
+    }
+
+    .social-container {
+      display: flex;
+
+      justify-content: center;
+      margin-top: 1.25rem;
+      size: 16px;
+      font-size: 16px;
+
+      a {
+        margin: 0 0.9375rem;
+        font-size: 1.875rem;
+        img {
+          width: 36px;
+          height: 36px;
+        }
+      }
+
+      a:hover {
+        transform: translateY(-0.125rem);
+      }
+    }
+  }
 }
