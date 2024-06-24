@@ -1,0 +1,30 @@
+@if(showHeader) {
+<header class="header">
+  <div class="header-container">
+    <div class="logo-container">
+      <img src="logo-sem-bg.png" alt="Logo" class="logo" />
+    </div>
+    <div class="actions-container">
+      <button
+        pButton
+        type="button"
+        icon="pi pi-plus"
+        label="Nova postagem"
+        [raised]="true" severity="secondary"
+        title="Criar nova postagem"
+        routerLink="/new-post"
+      ></button>
+      <button
+        pButton
+        type="button"
+        icon="pi pi-book"
+        label="Minhas postagens"
+        [raised]="true" severity="secondary"
+        title="Ver minhas postagens"
+        routerLink="/my-posts"
+      ></button>
+      <p-tieredMenu title="teste" [model]="profileMenu"></p-tieredMenu>
+    </div>
+  </div>
+</header>
+}

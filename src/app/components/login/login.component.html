@@ -1,19 +1,19 @@
 <div class="form-container login">
-  <img src="https://i.imgur.com/1sO3Xhz.png" alt="Logo" class="logo" />
+  <img src="logo-sem-bg.png" alt="Logo" class="logo" />
   <h2>Seja bem-vindo(a)!</h2>
-  <form>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <div class="input-group">
-      <input pInputText type="email" placeholder="Email" required />
+      <input pInputText type="email" placeholder="Email" formControlName="email" required/>
     </div>
     <div class="input-group">
-      <input pPassword placeholder="Senha" required />
+      <input pPassword placeholder="Senha" formControlName="password" required/>
     </div>
     <div class="remember-forgot">
-      <p-checkbox binary="true" label="Lembrar senha"></p-checkbox>
-      <a href="#">Esqueci minha senha</a>
+      <p-checkbox binary="true" label="Lembrar senha" formControlName="rememberMe"></p-checkbox>
+      <a href="#" (click)="onForgotPassword($event)">Esqueci minha senha</a>
     </div>
     <p-button type="submit" label="Entrar" icon="pi pi-sign-in"></p-button>
-    <div class="divider"><span>ou</span></div>
+    <div class="divider"><p-divider /><span>ou</span><p-divider /></div>
     <div class="social-container">
       <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/3955/3955051.png" alt="LinkedIn"></a>
       <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/300/300221.png" alt="Google"></a>

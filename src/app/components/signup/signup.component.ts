@@ -7,6 +7,7 @@ import { InputIconModule } from 'primeng/inputicon';
 import { ButtonModule } from 'primeng/button';
 import { IconFieldModule } from 'primeng/iconfield';
 import { FormsModule } from '@angular/forms';
+import { DividerModule } from 'primeng/divider';
 
 @Component({
   selector: 'app-signup',
@@ -18,6 +19,7 @@ import { FormsModule } from '@angular/forms';
     ButtonModule,
     IconFieldModule,
     InputIconModule,
+    DividerModule,
   ],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.scss'
