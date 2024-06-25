@@ -2,12 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { ItemServiceService } from '../services/item-service/item-service.service';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
+import { ImageModule } from 'primeng/image';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CardModule, ButtonModule, CommonModule],
+  imports: [CardModule, ButtonModule, CommonModule, ImageModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
@@ -21,13 +22,13 @@ export class HomeComponent implements OnInit {
   }
 
   fetchItems(): void {
-    this.itemService.getAllItems().subscribe(
-      (data) => {
+    this.itemService.getAllItems().subscribe({
+      next: (data) => {
         this.items = data;
       },
-      (error) => {
-        console.error('Erro ao buscar itens:', error);
-      }
-    );
+      error: (err) => {
+        console.error('Erro ao buscar itens:', err);
+      },
+    });
   }
 }

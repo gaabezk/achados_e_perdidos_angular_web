@@ -16,3 +16,18 @@ html {
 .p-tieredmenu {
   padding: 0;
 }
+
+.p-card {
+  .p-card-body {
+    padding-top: 0;
+  }
+  .p-card-content {
+    padding: 0;
+  }
+  .p-card-title {
+    font-size: 16px;
+  }
+  .p-card-subtitle {
+    font-size: 12px;
+  }
+}

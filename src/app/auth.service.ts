@@ -4,7 +4,6 @@ import {
   UserCredential,
   sendPasswordResetEmail,
   signInWithEmailAndPassword,
-  user,
 } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import { Observable, from } from 'rxjs';

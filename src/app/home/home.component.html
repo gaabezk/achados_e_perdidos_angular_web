@@ -1,13 +1,19 @@
 <div class="card-container">
-    <ng-container *ngFor="let item of items">
-      <p-card [style]="{ width: '300px', margin: '10px' }">
-        <img [src]="item.images[0]?.url" alt="Imagem do item" class="card-image" />
-        <div style="text-align: center; margin-top: 1rem;">
-          <h4>{{ item.title }}</h4>
-          <p>{{ item.description }}</p>
-          <!-- <button title="botao" pButton type="button" label="Detalhes" icon="pi pi-info-circle" (click)="handleButtonClick(item)"></button> -->
-        </div>
-      </p-card>
-    </ng-container>
-  </div>
-  
+  <p-card
+    *ngFor="let item of items"
+    [header]="item.title"
+    [subheader]="item.description"
+    [style]="{ width: '200px' }"
+  >
+    <p>{{ item.location }}</p>
+    <p>{{ item.date | date : "dd/MM/yyyy" }}</p>
+    <ng-template pTemplate="header">
+      <p-image
+        class="card-image"
+        [src]="item.images[0]?.url"
+        alt="Image"
+        [preview]="true"
+      />
+    </ng-template>
+  </p-card>
+</div>
